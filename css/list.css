@@ -13,6 +13,10 @@
     border-bottom: 1px solid rgb(231, 229, 229);
 }
 
+.list__item--hidden {
+    display: none;
+}
+
 .list__task--done {
     text-decoration: line-through;
 }
@@ -23,10 +27,12 @@
     width: 30px;
     height: 30px;
     padding: 0;
+    cursor: pointer;
 }
 
 .list__button--check {
     background: #0a8127;
+    transition: 0.5s;
 }
 
 .list__button--check:hover {
@@ -39,6 +45,7 @@
 
 .list__button--delete {
     background: #e12424;
+    transition: 0.5s;
 }
 
 .list__button--delete:hover {
