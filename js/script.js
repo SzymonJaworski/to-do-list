@@ -1,5 +1,5 @@
 {
-    const tasks = [];
+    let tasks = [];
 
     const deleteTask = (taskIndex) => {
         tasks.splice(taskIndex, 1);
@@ -10,11 +10,12 @@
         tasks[taskIndex].check = !tasks[taskIndex].check;
         render();
     };
+
     const addNewTask = (newTask) => {
-        tasks.push({
-            content: newTask,
-            check: false
-        });
+        tasks = [
+            ...tasks,
+            { content: newTask, check: false }
+        ];
         render();
     };
 
