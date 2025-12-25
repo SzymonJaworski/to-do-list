@@ -7,7 +7,9 @@
     };
 
     const toggleTaskCheck = (taskIndex) => {
-        tasks[taskIndex].check = !tasks[taskIndex].check;
+        tasks = tasks.map((task, index) =>
+            index === taskIndex ? { ...task, check: !task.check } : task
+        );
         render();
     };
 
