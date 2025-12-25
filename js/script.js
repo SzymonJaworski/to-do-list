@@ -2,7 +2,7 @@
     let tasks = [];
 
     const deleteTask = (taskIndex) => {
-        tasks.splice(taskIndex, 1);
+        tasks = tasks.filter((task, index) => index !== taskIndex);
         render();
     };
 
