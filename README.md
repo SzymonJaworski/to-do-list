@@ -10,9 +10,6 @@ This application allows users to manage their daily tasks efficiently. It featur
 * **CSS (BEM Methodology)** 
 * **JavaScript (ES6+)** – Implemented dynamic rendering, array methods
 
-## 🧠 What I Learned in this Project
-* **Dynamic Rendering:** Instead of hardcoding HTML, I'm now generating it dynamically based on a data array (`tasks`)
-
 
 ## 📈 Key Features
 * **Add Tasks:** Quick entry via button
