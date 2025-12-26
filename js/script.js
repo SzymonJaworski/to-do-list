@@ -1,5 +1,6 @@
 {
     let tasks = [];
+    let doneTasksHidden = false;
 
     const deleteTask = (taskIndex) => {
         tasks = tasks.filter((task, index) => index !== taskIndex);
@@ -18,6 +19,19 @@
             ...tasks,
             { content: newTask, check: false }
         ];
+        render();
+    };
+
+    const toggleDoneVisibility = () => {
+        doneTasksHidden = !doneTasksHidden;
+        render();
+    };
+
+    const completeAllTasks = () => {
+        tasks = tasks.map((task) => ({
+            ...task,
+            check: true
+        }));
         render();
     };
 
@@ -41,6 +55,37 @@
         });
     };
 
+    const bindControlEvents = () => {
+        const hideDoneButton = document.querySelector(".js-hideDoneSwitch");
+        const allDoneButton = document.querySelector(".js-completeAll");
+
+        if (hideDoneButton) {
+            hideDoneButton.addEventListener("click", toggleDoneVisibility);
+        }
+
+        if (allDoneButton) {
+            allDoneButton.addEventListener("click", completeAllTasks);
+        }
+    };
+
+    const renderSectionButtons = () => {
+        const containerElement = document.querySelector(".js-panel");
+
+        if (tasks.length === 0) {
+            containerElement.innerHTML = "";
+            return;
+        }
+
+        containerElement.innerHTML = `
+        <button class="section__button js-hideDoneSwitch">
+        ${doneTasksHidden ? "Pokaż" : "Ukryj"} 
+        ukończone </button>
+        <button class="section__button js-completeAll" 
+        ${tasks.every(({ check }) => check) ? "disabled" : ""}> 
+        Ukończ wszystkie </button>
+        `;
+    };
+
     const render = () => {
         let htmlString = "";
 
@@ -58,8 +103,10 @@
 
         document.querySelector(".js-taskList").innerHTML = htmlString;
 
+        renderSectionButtons();
         bindDeleteTaskEvents();
         bindCheckTaskEvents();
+        bindControlEvents();
     };
 
     const onFormSubmit = (event) => {
