@@ -91,14 +91,14 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li class="list__item js-item">
-            <button class="list__button list__button--check js-buttonCheck">
-            ${task.check ? "✓" : ""}
-            </button>
-            <span class="list__task ${task.check ? "list__task--done" : ""}">${task.content}</span>
-            <button class="list__button list__button--delete js-buttonDelete">🗑</button>
-            </li>
-            `;
+        <li class="list__item ${task.check && doneTasksHidden ? "list__item--hidden" : ""} js-item">
+        <button class="list__button list__button--check js-buttonCheck">
+        ${task.check ? "✓" : ""} 
+        </button>
+        <span class="list__task ${task.check ? "list__task--done" : ""}">${task.content}</span>
+        <button class="list__button list__button--delete js-buttonDelete">🗑</button>
+        </li>
+        `;
         }
 
         document.querySelector(".js-taskList").innerHTML = htmlString;
