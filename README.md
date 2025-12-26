@@ -8,24 +8,31 @@ This application allows users to manage their daily tasks efficiently. It featur
 
 
 ## 🛠️ Tech Stack & Concepts
-* **HTML** 
-* **CSS (BEM Methodology)** 
-* **JavaScript (ES6+)** – Implemented dynamic rendering, array methods
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+
+The project utilizes modern JavaScript practices and advanced CSS techniques:
+* **ES6+ Features**: Arrow functions, template literals, spread operators, and destructuring.
+* **Advanced Array Methods**: Usage of `map`, `filter`, and `every` to ensure immutable state updates.
+* **BEM Methodology**: Clean, modular, and maintainable CSS class naming.
+* **CSS Grid & Flexbox**: Modern layouts for a seamless and responsive user experience.
 
 
-## 🧠 What I Learned in this Project
-* **Dynamic Rendering:** Instead of hardcoding HTML, I'm now generating it dynamically based on a data array (`tasks`)
+## Features 📈 
 
-
-## 📈 Key Features
-* **Add Tasks:** Quick entry via button
-* **Toggle Status:** Mark tasks as done with a single click (includes visual strike-through).
-* **Delete Tasks:** Remove unwanted items from your list instantly.
-* **Auto-focus:** The input field automatically regains focus for a faster workflow.
+This application provides comprehensive task management:
+* **Adding new tasks** – dynamically expanding the list.
+* **Deleting tasks** – removing individual items from the list.
+* **Toggling completion** – visual strike-through for finished tasks.
+* **Hiding completed tasks** – an interactive toggle switch to focus only on remaining work.
+* **Bulk marking** – one-click functionality to mark all tasks as completed.
+* **Responsive Web Design (RWD)** – fully optimized for both mobile devices and desktops.
 
 
 ## 💡 What's inside?
-![Animation](https://github.com/user-attachments/assets/5e87cb15-a1b3-457c-8dbd-e825847f0f6b)
+![Animation](https://github.com/user-attachments/assets/6a226079-90bc-4dd9-bd3e-58bf6dd7df2d)
+
 
 
 ## Demo
