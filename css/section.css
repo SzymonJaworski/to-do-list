@@ -54,3 +54,8 @@
         margin: 10px;
     }
 }
+
+.section__button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
