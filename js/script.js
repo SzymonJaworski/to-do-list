@@ -77,7 +77,8 @@
         }
 
         containerElement.innerHTML = `
-        <button class="section__button section__button--disabled js-hideDoneSwitch">
+        <button class="
+        section__button section__button--disabled js-hideDoneSwitch">
         ${doneTasksHidden ? "Pokaż" : "Ukryj"} 
         ukończone </button>
         <button class="section__button js-completeAll" 
